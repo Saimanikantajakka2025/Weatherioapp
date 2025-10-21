@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 require('dotenv').config();
 
 // -------------------- MongoDB Connection -------------------- //
-const MONGO_URI = process.env.MONGODB_URI ;
+const MONGO_URI = "mongodb+srv://corpgroupbeintern_db_user:wIUfjZFqCPO0JvIh@cluster0.ve8fl4r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" ;
 
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('✅ Connected to MongoDB'))
@@ -273,5 +273,5 @@ const server = http.createServer(async (req, res) => {
   });
 });
 
-const PORT = process.env.PORT;
+const PORT = 8000
 server.listen(PORT, () => console.log(`🌤️ Weather.io running at http://localhost:${PORT}`));
