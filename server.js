@@ -274,6 +274,6 @@ const server = http.createServer(async (req, res) => {
 });
 
 const PORT = 8000
-app.listen(8000, '0.0.0.0', () => {
+server.listen(8000, '0.0.0.0', () => {
   console.log('Weather.io running at http://0.0.0.0:8000');
 });
